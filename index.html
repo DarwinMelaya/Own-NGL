@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message ka na dali!♡</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/right_img.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="contact-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="contact-left"
+        id="contactForm"
+      >
+        <div class="contact-left-title">
+          <h2>Send me an anonymous message!</h2>
+          <hr />
+        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="5b3e5b3d-e30a-437c-a862-78e035d2eecb"
+        />
+
+        <!-- Add the recipient email -->
+        <input type="hidden" name="email_to" value="your-email@example.com" />
+
+        <!-- Honeypot field to catch bots -->
+        <input type="text" name="honeypot" style="display: none" />
+
+        <!-- Hidden fields to handle anonymous data -->
+        <input type="hidden" name="name" value="Anonymous" />
+        <input type="hidden" name="email" value="no-reply@mydomain.com" />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          class="contact-inputs"
+          id="messageBox"
+          required
+        ></textarea>
+        <button type="submit">
+          Submit <img src="assets/arrow_icon.png" alt="Arrow icon" />
+        </button>
+      </form>
+      <div class="contact-right">
+        <img src="assets/right_img.png" alt="Right side image" />
+      </div>
+
+      <!-- Container to show hearts -->
+      <div id="heart-container"></div>
+
+      <!-- Modal for thank you message -->
+      <div id="thankyou-modal" class="hidden">Thankyouu puu!(●'◡'●)</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
